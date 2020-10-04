@@ -4,14 +4,13 @@ const burger = require("../models/burger.js");
 const router = express.Router();
 
 router.get("/", function(req, res) {
-    console.log("Connect")
-    burger.read(function(data) {
+    burger.retrieve(function(data) {
         res.render("index", { burgers: data });
     });
 });
 
 router.post("/api/burgers", function(req, res){
-    burger.create(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(res) {
+    burger.create(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result) {
         res.json({ id: res.insertId })
     });
 });

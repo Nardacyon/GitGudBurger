@@ -1,24 +1,24 @@
-const orm = require("../config/orm.js");
+var orm = require("../config/orm.js");
 
-const burger = {
-    read: function(res) {
+var burger = {
+    retrieve: function(cb) {
         orm.retrieve("burgers", (data) => {
-            res(data);
+            cb(data);
         });
     },
-    create: function(values, res) {
+    create: function(values, cb) {
         orm.create("burgers", ["burger_name", "devoured"], values, (data) => {
-            res(data);
+            cb(data);
         });
     },
-    update: function(id, res) {
-        orm.update("burgers", "devoured=true", id, res, (data) => {
-            res(data);
+    update: function(id, cb) {
+        orm.update("burgers", "devoured=true", id, cb, (data) => {
+            cb(data);
         });
     },
-    destroy: function(res, id) {
-        orm.destroy("burgers", res, id, (data) => {
-            res(data);
+    destroy: function(cb, id) {
+        orm.destroy("burgers", cb, id, (data) => {
+            cb(data);
         });
     }
 };
