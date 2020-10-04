@@ -1,4 +1,4 @@
-const connection = require("./connection");
+const connection = require("./connection.js");
 
 function helper(nums) {
     const arr = [];
@@ -12,7 +12,7 @@ function helper(nums) {
 
 const orm = {
     retrieve: function(table, cb) {
-        connection.query(`SELECT * FROM ??`, [table], (err, data) => {
+        connection.query("SELECT * FROM ??", [table], function(err, data) {
             if (err) throw err;
             else cb(data);
         });
