@@ -1,4 +1,4 @@
-<header>Git Gud Burgers</header>
+<h1>Git Gud Burgers</h1>
 <h4>Git Gud Burgers, Bring home Gud Burgers, Devour the Gud Burgers</h4>
 
 <div class="container">
@@ -10,7 +10,7 @@
             <ul>
                 {{#each burgers}}
                     {{#if devoured}}
-                        {{> burgers/burger-block devoured=false}}
+                        {{> burger-block}}
                     {{/if}}
                 {{/each}}
             </ul>
@@ -22,7 +22,7 @@
             <ul>
                 {{#each burgers}}
                     {{#unless devoured}}
-                        {{> burgers/burger-block devoured=true}}
+                        {{> burger-block}}
                     {{/unless}}
                 {{/each}}
             </ul>
@@ -33,7 +33,7 @@
             <div class="form-group">
                 <label for="name">Burger Name</label>
                 <input type="text" id="name" name="name" class="form-control">
-                <button type="submit">Create</button>
+                <button class="create" type="submit">Create</button>
             </div>
         </form>
     </div>
