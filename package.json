@@ -2,7 +2,7 @@
   "name": "gitgudburger",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -20,7 +20,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
-    "mysql": "^2.18.1",
-    "promise": "^8.1.0"
+    "jquery": "^3.5.1",
+    "mysql": "^2.18.1"
   }
 }
