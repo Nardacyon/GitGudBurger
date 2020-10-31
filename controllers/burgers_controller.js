@@ -1,6 +1,5 @@
 const express = require("express");
 const burger = require("../models/burger.js");
-
 const router = express.Router();
 router.get("/", function(req, res) {
     burger.selectAll((data) => {
@@ -27,5 +26,4 @@ router.delete("/api/burgers/:id", function (req, res) {
         else res.status(200).end();
     });
 });
-
 module.exports = router;

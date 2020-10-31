@@ -15,15 +15,9 @@ $(document).ready(function () {
         event.preventDefault();
         var id = $(this).data("id");
         $.ajax("/api/burgers/" + id, {
-            type: "DELETE"
-        // }).catch((err) => {
-        //     if (err) {
-        //         location.reload();
-        //     }
-        // });
-        }).then(() => {
-            location.reload();
+            type: "DELETE"  
         });
+        location.reload();
     });
 
     $(".create").on("click", function (event) {
