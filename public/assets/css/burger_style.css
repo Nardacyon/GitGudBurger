@@ -1,6 +1,7 @@
 body {
     text-align: center;
     background-color: #f6f6f6;
+    
 }
 h1 {
     text-align: center;
@@ -10,5 +11,17 @@ h1 {
 }
 
 .container {
-    color: #f60002
+    color: #f60002;
+}
+
+.change-devoured {
+    background-color: #3a7636;
+    padding: 10px;
+    border-radius: 0.3rem;
+    color: white;
+    font-size: 18px;
+}
+.change-devoured:hover {
+    background-color: #bdde6d;
+    color: black;
 }
